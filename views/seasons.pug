@@ -1,0 +1,22 @@
+html
+    head
+        link(rel="stylesheet" href="/css/styles.css")
+  
+
+
+    body
+        h1 Showdata
+        div
+table(style='width:100%', border='1')
+  tr
+    th NO.
+    th Title
+    th Director
+        
+  for episode in season.episodes
+    tr
+        td(class="number")= episode.number
+        td(class="title")= episode.title
+        td(class="director")= episode.director
+    tr
+        td(colspan=3)= episode.synopsis
